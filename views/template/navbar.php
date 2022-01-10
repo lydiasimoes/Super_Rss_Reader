@@ -26,7 +26,7 @@
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 link-secondary fs-4">
                                         <li class="nav-item">
-                                            <a class="nav-link" aria-current="page" href="farmer.html">Tennis</a>
+                                            <a class="nav-link" aria-current="page" href="/../pages/liens.php">Tennis</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" aria-current="page" href="shop.html".html">Basket</a>
