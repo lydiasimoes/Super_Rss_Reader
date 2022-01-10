@@ -1,5 +1,5 @@
 
-    <?php include(dirname(__FILE__).'../../header.php');?>
+    <?php include(dirname(__FILE__).'/template/header.php');?>
             <!-- ***** navbar **** -->
     <?php include(dirname(__FILE__).'/template/navbar.php');?>
 
@@ -40,4 +40,4 @@
 </div>
 
 
-<?php include(dirname(__FILE__).'../../footer.php');?>
+<?php include(dirname(__FILE__).'/template/footer.php');?>
