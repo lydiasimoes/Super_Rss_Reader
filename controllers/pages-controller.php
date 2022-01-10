@@ -9,9 +9,9 @@
 
 include(dirname(__FILE__).'/../views/template/header.php');
 include(dirname(__FILE__).'/../views/template/navbar.php');
-include(dirname(__FILE__). '/../views/pages.php');
+include(dirname(__FILE__). '/../views/pages/liens.php');
 include(dirname(__FILE__).'/../views/template/footer.php');
 
 if($football > 0){
-    echo $football;
+    ;
 }

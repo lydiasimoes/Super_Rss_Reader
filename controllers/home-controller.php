@@ -15,7 +15,3 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     include(dirname(__FILE__).'/../views/template/footer.php');
 }
 
-  
-
-
-  
