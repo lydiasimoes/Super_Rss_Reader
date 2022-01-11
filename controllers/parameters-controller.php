@@ -14,6 +14,10 @@
             $errorArray['errorsubject'] = 'Sélectionnez 3 articles !';
         } 
 }
+setcookie("cookieScreen", "$screenMode", time()+60*60*24*7);
+setcookie("cookieArticle", "$articleNumber", time()+60*60*24*7);
+setcookie("cookieSport", json_encode($subject), time()+60*60*24*7);
+
 if(!($_SERVER["REQUEST_METHOD"] == "POST") || !empty($errorArray)){
     include(dirname(__FILE__).'/../views/template/header.php');
     include(dirname(__FILE__).'/../views/template/navbar.php');
