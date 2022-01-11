@@ -9,4 +9,4 @@
     <title>Super Rss Reader</title>
 </head>
 
-<body class="bg-secondary">
+<body class="light">
