@@ -14,6 +14,13 @@
             $errorArray['errorsubject'] = 'Sélectionnez 3 articles !';
         } 
 }
+$subject = filter_input(INPUT_POST,'subject',FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY);
+var_dump($subject);
+foreach ($subject as $key => $value) {
+    if ($value < 1 || $value > 5) {
+        $errorArray['errorValue'] = 'c\'est interdit';
+    } 
+}
 setcookie("cookieScreen", "$screenMode", time()+60*60*24*7);
 setcookie("cookieArticle", "$articleNumber", time()+60*60*24*7);
 setcookie("cookieSport", json_encode($subject), time()+60*60*24*7);
