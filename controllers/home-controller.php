@@ -6,7 +6,8 @@
         3 => 'tennis',
         4 => 'basket',
         5 => 'handball',
-    ); 
+    );
+     
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $flux = filter_input(INPUT_POST, 'flux', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY);
     include(dirname(__FILE__).'/../views/template/header.php');
