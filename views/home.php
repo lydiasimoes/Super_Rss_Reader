@@ -3,7 +3,6 @@
 <?php include(dirname(__FILE__).'/template/navbar.php');?>
 
 <div class="background">
-    <div class="btn-toggle"> Nuit </div>
     <h1 class="h2 text-center text-secondary mb-5 fw-bold">Veuillez sélectionner 3 sujets</h1>
 
     <div class="container p-0">

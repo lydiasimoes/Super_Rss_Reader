@@ -24,7 +24,7 @@
     }
 }  */
 
-.btn-toggle{
+/* .btn-toggle{
     position : absolute;
     top: 20%;
     right: 8%;
@@ -37,4 +37,25 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+} */
+
+/* .dark {
+    background-color: #112F41;
+    color: #ffffff;
 }
+
+.dark button {
+    background: #144098;
+    color: #fff;
+} */
+
+
+/* body {
+    background-color: white;
+    color: black;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+} */
