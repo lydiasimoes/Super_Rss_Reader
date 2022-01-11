@@ -22,19 +22,17 @@ foreach ($subject as $key => $value) {
         $errorArray['errorValue'] = 'c\'est interdit';
     } 
 }
-
+setcookie("cookieScreen", "$screenMode", time()+60*60*24*7);
+setcookie("cookieArticle", "$articleNumber", time()+60*60*24*7);
 setcookie("cookieSport", json_encode($subject), time()+60*60*24*7);
 
 }
 
-    include(dirname(__FILE__).'/../views/parameters.php');
-
     if (($_SERVER["REQUEST_METHOD"] != "POST") || !empty($errorArray)) { 
-
-        include(dirname(__FILE__).'/../views/form.php');
+        
+        include(dirname(__FILE__).'/../views/parameters.php');
 
     } else { 
-
 
         include(dirname(__FILE__).'/../views/pages.php');
         
