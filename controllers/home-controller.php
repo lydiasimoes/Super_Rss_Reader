@@ -14,7 +14,7 @@
     }
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY);
-    // setcookie("cookieScreen", "$screenMode", time()+60*60*24*7);
+    setcookie("cookieScreen", $screenMode, time()+60*60*24*7);
     // setcookie("cookieArticle", "$articleNumber", time()+60*60*24*7);
     setcookie("cookieSport", json_encode($subject), time()+60*60*24*7);
     include(dirname(__FILE__).'/../views/template/header.php');

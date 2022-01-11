@@ -1,7 +1,4 @@
-.background{
-    background-color: rgb(12, 12, 165);
-} 
-
-.colorText{
-    color: rgb(211, 16, 16);
+body{
+    background-color: rgb(15, 15, 19);
+    color: rgb(206, 197, 197);
 }

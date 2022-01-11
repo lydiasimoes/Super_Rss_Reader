@@ -1,3 +1,4 @@
+
 <h1 class="h2 text-center text-white mb-5 mt-3">Veuillez sélectionner 3 sujets parmi les 5 catégories suivantes</h1>
 <form action="<?=htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post" novalidate>
 <div class="container p-0">
@@ -34,5 +35,4 @@
     </div>    
 </div>
 </form>
-
 
