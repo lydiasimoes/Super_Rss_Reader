@@ -23,7 +23,7 @@
         foreach ($xml->channel->item as $item){
             $datetime = date_create($item->pubDate);
             $date = date_format($datetime, 'd M Y, H\hi');
-            echo '<li><a href="'.$item->link.'">'.utf8_decode($item->title).'</a> ('.$date.')</li>';
+            echo '<div><a href="'.$item->link.'">'.utf8_decode($item->title).'</a> ('.$date.')</div>';
             echo $item->description;
         }
     
