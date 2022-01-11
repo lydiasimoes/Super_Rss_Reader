@@ -17,8 +17,7 @@
 //             echo '<li><a href="'.$item->link.'">'.utf8_decode($item->title).'</a> ('.$date.')</li>';
 //             echo $item->description;
 //         }
-//     }
-   
+//     } 
         $xml = simplexml_load_file('https://rmcsport.bfmtv.com/rss/tennis/');
         foreach ($xml->channel->item as $item){
             $datetime = date_create($item->pubDate);

@@ -1,7 +1,4 @@
-<?php
-    $flux ?? '';
-    $val ?? '';
-?>
+
 <header> 
             <div class="container-fluid bg-dark p-0">
                         <nav class="navbar navbar-expand-lg sticky-top navbar-light navbar-dark bg-dark">
@@ -16,12 +13,14 @@
                                 </button>
                                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 link-secondary fs-4">
-                                    <?php foreach($flux as $val){?>
+                                    <?php 
+                                    if(!empty($cookieSport)){
+                                        foreach($cookieSport as $val){?>
                                         <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="/../pages/liens.php"><?=$array[$val] ?? ''?></a>
+                                        <a class="nav-link" aria-current="page" href="/../pages/liens.php"><?=$array[$val]?></a>
                                         </li>
                                     <?php
-                                }?>
+                                }}?>
                                         <li class="nav-item">
                                             <a class="nav-link" aria-current="page" href="/../../controllers/parameters-controller.php">Paramètres</a>
                                         </li>
