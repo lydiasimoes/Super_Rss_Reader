@@ -27,9 +27,10 @@
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 link-secondary fs-4">
                                     <?php 
                                     if(!empty($cookieSport)){
+                                        $o = 1;
                                         foreach($cookieSport as $val){?>
                                         <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="/views/pages/detail.php"><?=$array[$val]?></a>
+                                        <a class="nav-link" aria-current="page" href="/controllers/detail-controller.php?flux=<?=$val;?>"><?=$array[$val]?></a>
                                         </li>
                                     <?php
                                 }}?>

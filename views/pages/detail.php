@@ -1,32 +1,14 @@
 
-<header> 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1 class="text-center fw-bold fs-1 mt-3 mb-3">tennis</h2>
-            <div class="mb-3 ms-5">
-                <div>
-                    Titre :
-                </div>
-                <div>
-                    Date :
-                </div>
-                <div>
-                    Description :
-                </div>
-            </div>
-            <div class="mb-3 ms-5">
-                <div>
-                    Titre :
-                </div>
-                <div>
-                    Date :
-                </div>
-                <div>
-                    Description :
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</header>
+
+<?php 
+
+$count = 0;
+foreach ($xml->channel->item as $item){ 
+                    $datetime = date_create($item->pubDate);
+                    $date = date_format($datetime, 'd M Y, H\hi');?>
+                    <?='#'.$date.'</br>'?>  
+                        <a href="/controllers/article-controller.php?id=<?=$i++;?>&flux=<?=$val;?>"><?=$item->title.'</br></br>';?></a> 
+                        <div></div>               
+                        <?php $count++;
+                            if ($count == 6)
+                            break; } ?>
