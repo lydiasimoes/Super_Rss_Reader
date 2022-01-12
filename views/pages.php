@@ -12,3 +12,4 @@
             $cookieSport = [];
         }
     include(dirname(__FILE__).'/pages/liens.php');
+    include(dirname(__FILE__).'/pages/article.php');
