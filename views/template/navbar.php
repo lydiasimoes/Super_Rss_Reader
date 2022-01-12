@@ -1,4 +1,16 @@
-
+<?php
+        $array = array(
+            1 => 'football',
+            2 => 'rugby',
+            3 => 'tennis',
+            4 => 'basket',
+            5 => 'handball',
+        ); 
+        if(isset($_COOKIE['cookieSport'])){
+            $cookieSport = json_decode($_COOKIE['cookieSport'], true);
+        }else{
+            $cookieSport = [];
+        } ?>
 <header> 
             <div class="container-fluid bg-dark p-0">
                         <nav class="navbar navbar-expand-lg sticky-top navbar-light navbar-dark bg-dark">
