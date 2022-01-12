@@ -30,24 +30,24 @@
                     <p class="mb-2 mt-3 text-center fw-bold">Sélectionnez vos sujets :</p>  
                     <div class="col d-flex flex-column align-items-center p-2">
                         <div>
-                            <input type="checkbox" id="football" name="subject" value="1" required>
+                            <input type="checkbox" id="football" name="subject[]" value="1" required>
                             <label for="football" class="ms-2">Football</label>
                         </div>        
                         
                         <div>
-                            <input type="checkbox" id="tennis" name="subject" value="2" required>
+                            <input type="checkbox" id="tennis" name="subject[]" value="2" required>
                             <label for="tennis"class="ms-2">Tennis</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="rugby" name="subject" value="3" required>
+                            <input type="checkbox" id="rugby" name="subject[]" value="3" required>
                             <label for="rugby"class="ms-2">Rugby</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="basket" name="subject" value="4" required>
+                            <input type="checkbox" id="basket" name="subject[]" value="4" required>
                             <label for="basket"class="ms-2">Basket</label>
                         </div>
                         <div>
-                            <input type="checkbox" id="handball" name="subject" value="5" required>
+                            <input type="checkbox" id="handball" name="subject[]" value="5" required>
                             <label for="handball"class="ms-2">Handball</label> 
                         </div>  
                         <div class="text-dark fst-italic mb-3 mt-3">

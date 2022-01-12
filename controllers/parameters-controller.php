@@ -24,19 +24,23 @@
     }
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY);
-    $articleNumber = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY);
-    $screenMode = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY);
+    $articleNumber = filter_input(INPUT_POST, 'articleNumber', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY);
+    $screenMode = filter_input(INPUT_POST, 'screenMode', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY);
     setcookie("cookieSport", json_encode($subject), time()+60*60*24*7);
     setcookie("cookieArticle", json_encode($articleNumber), time()+60*60*24*7);
     setcookie("cookieScreen", json_encode($screenMode), time()+60*60*24*7);
+    header('location: /controllers/pages-controller.php');
 }
-if(empty($cookieArticle) && empty($cookieScreen)){
+
+
+
     include(dirname(__FILE__).'/../views/template/header.php');
     include(dirname(__FILE__). '/../views/parameters.php');       
     include(dirname(__FILE__).'/../views/template/footer.php');
-}else{
-    header('location: /controllers/pages-controller.php');
-}
+    
+
+
+
 
 
 
