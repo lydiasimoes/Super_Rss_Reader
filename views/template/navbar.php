@@ -1,4 +1,16 @@
-
+<?php
+       $array = array(
+        1 => 'Football',
+        2 => 'Rugby',
+        3 => 'Tennis',
+        4 => 'Basket',
+        5 => 'Handball',
+        ); 
+        if(isset($_COOKIE['cookieSport'])){
+            $cookieSport = json_decode($_COOKIE['cookieSport'], true);
+        }else{
+            $cookieSport = [];
+        } ?>
 <header> 
             <div class="container-fluid bg-dark p-0">
                         <nav class="navbar navbar-expand-lg sticky-top navbar-light navbar-dark bg-dark">
@@ -17,7 +29,7 @@
                                     if(!empty($cookieSport)){
                                         foreach($cookieSport as $val){?>
                                         <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="/../pages/liens.php"><?=$array[$val]?></a>
+                                        <a class="nav-link" aria-current="page" href="/views/pages/detail.php"><?=$array[$val]?></a>
                                         </li>
                                     <?php
                                 }}?>
