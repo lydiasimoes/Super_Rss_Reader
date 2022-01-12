@@ -3,6 +3,7 @@ include(dirname(__FILE__).'/../views/template/header.php');
 include(dirname(__FILE__).'/../views/pages.php');
 include(dirname(__FILE__).'/../views/template/footer.php');
 
+
 // var_dump($array[$val]);
 //     if($array[$val] === 'football'){
 //         $xml = simplexml_load_file('https://rmcsport.bfmtv.com/rss/football/');
