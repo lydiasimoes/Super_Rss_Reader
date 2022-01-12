@@ -1,10 +1,10 @@
 <?php
-        $array = array(
-            1 => 'football',
-            2 => 'rugby',
-            3 => 'tennis',
-            4 => 'basket',
-            5 => 'handball',
+       $array = array(
+        1 => 'Football',
+        2 => 'Rugby',
+        3 => 'Tennis',
+        4 => 'Basket',
+        5 => 'Handball',
         ); 
         if(isset($_COOKIE['cookieSport'])){
             $cookieSport = json_decode($_COOKIE['cookieSport'], true);
@@ -29,7 +29,7 @@
                                     if(!empty($cookieSport)){
                                         foreach($cookieSport as $val){?>
                                         <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="/../pages/liens.php"><?=$array[$val]?></a>
+                                        <a class="nav-link" aria-current="page" href="/views/pages/detail.php"><?=$array[$val]?></a>
                                         </li>
                                     <?php
                                 }}?>

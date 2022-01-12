@@ -1,27 +1,32 @@
 <?php
-
     $errArray = [];
     $array = array(
-        1 => 'football',
-        2 => 'rugby',
-        3 => 'tennis',
-        4 => 'basket',
-        5 => 'handball',
-    ); 
+        1 => 'Football',
+        2 => 'Rugby',
+        3 => 'Tennis',
+        4 => 'Basket',
+        5 => 'Handball',
+        ); 
     if(isset($_COOKIE['cookieSport'])){
         $cookieSport = json_decode($_COOKIE['cookieSport'], true);
-        $cookieArticle = json_decode($_COOKIE['cookieArticle']);
-        $cookieScreen = json_decode($_COOKIE['cookieScreen']);
     }else{
         $cookieSport = [];
+    }
+    if(isset($_COOKIE['cookieSport'])){   
+        $cookieArticle = $_COOKIE['cookieArticle'];
+    }else{
         $cookieArticle = [];
+    }
+    if(isset($_COOKIE['cookieSport'])){
+        $cookieScreen = $_COOKIE['cookieScreen'];
+    }else{
         $cookieScreen = [];
     }
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY);
     setcookie("cookieSport", json_encode($subject), time()+60*60*24*7);
-    setcookie("cookieArticle", json_encode($articleNumber), time()+60*60*24*7);
-    setcookie("cookieScreen", json_encode($screenMode), time()+60*60*24*7);
+    setcookie("cookieArticle", $articleNumber, time()+60*60*24*7);
+    setcookie("cookieScreen", $screenMode, time()+60*60*24*7);
 }
 
     include(dirname(__FILE__).'/../views/template/header.php');
