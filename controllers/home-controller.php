@@ -16,12 +16,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY);
     setcookie("cookieSport", json_encode($subject), time()+60*60*24*7);
 }
-if(empty($cookieSport)){
+if(!empty($cookieSport) || isset($subject)){
+    header('location: /controllers/pages-controller.php');
+}else{
+    
     include(dirname(__FILE__).'/../views/template/header.php');
     include(dirname(__FILE__). '/../views/home.php');       
     include(dirname(__FILE__).'/../views/template/footer.php');
-}else{
-    header('location: /controllers/pages-controller.php');
 }
 
 

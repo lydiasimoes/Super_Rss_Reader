@@ -12,29 +12,31 @@
     }else{
         $cookieSport = [];
     }
-    if(isset($_COOKIE['cookieSport'])){   
-        $cookieArticle = $_COOKIE['cookieArticle'];
+    if(isset($_COOKIE['cookieArticle'])){   
+        $cookieArticle = json_decode($_COOKIE['cookieArticle'], true);
     }else{
         $cookieArticle = [];
     }
-    if(isset($_COOKIE['cookieSport'])){
-        $cookieScreen = $_COOKIE['cookieScreen'];
+    if(isset($_COOKIE['cookieScreen'])){
+        $cookieScreen = json_decode($_COOKIE['cookieScreen'], true);
     }else{
         $cookieScreen = [];
     }
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $subject = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY);
+    $articleNumber = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY);
+    $screenMode = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_NUMBER_INT, FILTER_REQUIRE_ARRAY);
     setcookie("cookieSport", json_encode($subject), time()+60*60*24*7);
-    setcookie("cookieArticle", $articleNumber, time()+60*60*24*7);
-    setcookie("cookieScreen", $screenMode, time()+60*60*24*7);
+    setcookie("cookieArticle", json_encode($articleNumber), time()+60*60*24*7);
+    setcookie("cookieScreen", json_encode($screenMode), time()+60*60*24*7);
 }
-
+if(empty($cookieArticle) && empty($cookieScreen)){
     include(dirname(__FILE__).'/../views/template/header.php');
     include(dirname(__FILE__). '/../views/parameters.php');       
     include(dirname(__FILE__).'/../views/template/footer.php');
-// }else{
-//     header('location: /controllers/pages-controller.php');
-// }
+}else{
+    header('location: /controllers/pages-controller.php');
+}
 
 
 

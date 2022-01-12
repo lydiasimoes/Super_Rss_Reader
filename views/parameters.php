@@ -22,7 +22,7 @@
                         <input type="radio" id="nine" name="articleNumber" value="2" required>
                         <label for="nine"class="ms-2 me-5">9</label>
 
-                        <input type="radio" id="twelve" name="articleNumber" value="2" required>
+                        <input type="radio" id="twelve" name="articleNumber" value="3" required>
                         <label for="twelve"class="ms-2">12</label>
                     </div>
                 
