@@ -1,12 +1,4 @@
-<?php
-    $arrayUrl = array(
-        1 => 'football',
-        2 => 'rugby',
-        3 => 'tennis',
-        4 => 'basket',
-        5 => 'handball',
-        ); 
-?>
+
 <h1 class="h2 text-center mt-3 mb-4">Vos trois flux préférés :</h1>
 <div class="container">
     <div class="row">
@@ -17,11 +9,13 @@
                     <div>
                     <?php
                     $xml = simplexml_load_file('https://rmcsport.bfmtv.com/rss/'.$arrayUrl[$val].'/');
+                    $i=0;
                     foreach ($xml->channel->item as $item){ 
                     $datetime = date_create($item->pubDate);
                     $date = date_format($datetime, 'd M Y, H\hi');?>
                     <?='#'.$date.'</br>'?>  
-                        <a href="/views/pages/article.php"><?=$item->title.'</br></br>';?></a>                
+                        <a href="/controllers/article-controller.php?id=<?=$i++;?>&flux=<?=$val;?>"><?=$item->title.'</br></br>';?></a> 
+                        <div></div>               
                         <?php $count++;
                             if ($count == 6)
                             break; } ?>

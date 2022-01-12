@@ -1,5 +1,5 @@
 <?php
-       $array = array(
+    $array = array(
         1 => 'Football',
         2 => 'Rugby',
         3 => 'Tennis',
